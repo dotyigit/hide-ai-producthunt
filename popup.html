@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Product Hunt #noAI</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        min-width: 250px;
+      }
+      .container {
+        padding: 20px;
+        background-color: #f9fafb;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .checkbox-input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        width: 1.25rem;
+        height: 1.25rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.25rem;
+        outline: none;
+        transition: background-color 0.15s ease-in-out;
+        cursor: pointer;
+        margin-right: 0.5rem;
+      }
+      .checkbox-input:checked {
+        background-color: #4c51bf;
+        border-color: #4c51bf;
+      }
+      .checkbox-label {
+        font-size: 0.875rem;
+        color: #4a5568;
+        cursor: pointer;
+      }
+      .save-btn {
+        display: block;
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.5rem;
+        text-align: center;
+        background-color: #3b82f6;
+        color: white;
+        border-radius: 0.25rem;
+        cursor: pointer;
+        border: 1px solid #3b82f6;
+        transition: background-color 0.15s ease-in-out;
+      }
+      .save-btn:hover {
+        background-color: #2563eb;
+        border-color: #2563eb;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">Filter Options</h2>
+      <div class="checkbox-container">
+        <input id="title" type="checkbox" class="checkbox-input" checked />
+        <label for="title" class="checkbox-label">Title</label>
+      </div>
+      <div class="checkbox-container">
+        <input
+          id="description"
+          type="checkbox"
+          class="checkbox-input"
+          checked
+        />
+        <label for="description" class="checkbox-label">Description</label>
+      </div>
+      <div class="checkbox-container">
+        <input id="badges" type="checkbox" class="checkbox-input" checked />
+        <label for="badges" class="checkbox-label">Badges</label>
+      </div>
+      <button id="save" class="save-btn">Save</button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
