@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Remove AI from Product Hunt",
+  "version": "1.0",
+  "description": "Removes AI-related products from Product Hunt list pages.",
+  "permissions": ["activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.producthunt.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "16x16.png",
+    "32": "32x32.png",
+    "48": "48x48.png",
+    "128": "128x128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Product Hunt #noAI"
+  }
+}
